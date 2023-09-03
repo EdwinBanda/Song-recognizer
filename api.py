@@ -43,7 +43,7 @@ def analisarAudio(audio, apiKey):
 
 nomeArquivo = "gravacao.wav"
 duracaoSegundos = 5
-apiKey = "ENTER_YOUR_API_KEY_"
+apiKey = "ENTER_YOUR_API_KEY"
 
 audio = gravarAudio(nomeArquivo, duracaoSegundos)
 
