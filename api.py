@@ -12,7 +12,7 @@ def gravarAudio(nomeArquivo, duracaoSegundos):
     # return audio
 
 def analisarAudio(audio, apiKey):
-    print("Analizando o audio...")
+    print("Analizyng audio...")
     audioData = open(nomeArquivo, 'rb').read()
     audioDataBase64 = base64.b64encode(audioData).decode('utf-8')
 
@@ -40,7 +40,7 @@ def analisarAudio(audio, apiKey):
             song['track']['title'],song['track']['subtitle']
         ]
     except requests.exceptions.RequestException as e:
-        print("Erro ao fazer a solicitação à API:", e)
+        print("Error making API request:", e)
         return None
 
 nomeArquivo = "gravacao.wav"
@@ -52,6 +52,6 @@ audio = gravarAudio(nomeArquivo, duracaoSegundos)
 resultadoAnalise = analisarAudio(audio, apiKey)
 
 if resultadoAnalise is not None:
-    print("Resultado da análise:", resultadoAnalise)
+    print(resultadoAnalise)
 else:
-    print("Não foi possível obter uma resposta da API.")
+    print("Could not get a response from the API.")
