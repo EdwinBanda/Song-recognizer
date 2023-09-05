@@ -54,5 +54,10 @@ If you have any questions or need assistance, feel free to contact the project m
 
 Name: Edwin Miro Eleuterio Banda
 
+LinkedIn: https://www.linkedin.com/in/edwin-banda-036a1323a/
+
 Email: casemirobanda@gmail.com
+
+Whatsapp: +258 846725213
+
 
