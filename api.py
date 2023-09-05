@@ -4,10 +4,10 @@ import base64
 import requests
 
 def gravarAudio(nomeArquivo, duracaoSegundos):
-    print("Iniciando gravação...")
+    print("Recording...")
     audio = sd.rec(int(duracaoSegundos * 44100), samplerate=44100, channels=1, dtype='int16')
     sd.wait()
-    print("Gravação concluída!")
+    # print("Gravação concluída!")
     wavio.write(nomeArquivo, audio, 44100, sampwidth=2)
     # return audio
 
@@ -26,7 +26,7 @@ def analisarAudio(audio, apiKey):
     headers = {
         "content-type": "text/plain",
         "x-rapidapi-host": "shazam.p.rapidapi.com",
-        "x-rapidapi-key": "ENTER_YOUR_API_KEY_"
+        "x-rapidapi-key": "ENTER_YOUR_API_KEY"
     }
 
     data = audioDataBase64
@@ -36,7 +36,9 @@ def analisarAudio(audio, apiKey):
         response.raise_for_status()
         # print("Resposta da API:", response.text)
         song = response.json()
-        return song['track']
+        return [
+            song['track']['title'],song['track']['subtitle']
+        ]
     except requests.exceptions.RequestException as e:
         print("Erro ao fazer a solicitação à API:", e)
         return None
@@ -53,4 +55,3 @@ if resultadoAnalise is not None:
     print("Resultado da análise:", resultadoAnalise)
 else:
     print("Não foi possível obter uma resposta da API.")
-
