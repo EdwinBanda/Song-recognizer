@@ -1,7 +1,7 @@
-# sound-recognizer
+# Song-recognizer
 This app consumes the shazam API for music recognition through small snippets
 
-Sound Recognizer is an application that allows you to recognize and identify different types of sounds.
+Song Recognizer is an application that allows you to recognize and identify different types of Songs.
 This repository contains the source code of the application and instructions on how to set it up on different machines.
 
 # Prerequisites
@@ -11,26 +11,26 @@ Before you begin, make sure you have the following prerequisites installed:
 * npm (Node.js package manager): Typically installed alongside Node.js.
 
 # Installation
-Follow these steps to set up Sound Recognizer on your machine:
+Follow these steps to set up Song Recognizer on your machine:
 
 1. Clone this repository:
-   git clone https://github.com/Edvvin18/sound-recognizer.git
+   git clone https://github.com/EdwinBanda/Song-recognizer.git
 
 2. Navigate to the project directory:
-   cd sound-recognizer
+   cd Song-recognizer
 
 3. Install project dependencies using npm:
   npm install
 
 # Usage
-After completing the installation, you can use Sound Recognizer as follows:
+After completing the installation, you can use Song Recognizer as follows:
 
 1. Start the application:
    npm start
 
 2. Open your web browser and access http://localhost:3000 to use the application.
 
-3. Use the interface to upload an audio file or record a sound, then click "Recognize Sound" to identify the sound.
+3. Use the interface to upload an audio file or record a sound, then click "Recognize Songs" to identify the sound.
 
 # Contribution
 If you wish to contribute to the development of this project, follow these steps:
