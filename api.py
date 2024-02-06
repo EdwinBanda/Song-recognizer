@@ -2,6 +2,7 @@ import sounddevice as sd
 import wavio
 import base64
 import requests
+import os
 
 def gravarAudio(nomeArquivo, duracaoSegundos):
     print("Gravando...")
@@ -47,7 +48,7 @@ def analisarAudio(audio, apiKey):
 
 nomeArquivo = "gravacao.wav"
 duracaoSegundos = 5
-apiKey = process.env.apiKey
+apiKey = os.environ.apiKey #You should add your api key to the .env file
 
 audio = gravarAudio(nomeArquivo, duracaoSegundos)
 
